@@ -1,10 +1,10 @@
-
+import Hero from "./sections/Hero/Hero"
 
 function Home() {
 
   return (
     <>
-        Home
+       <Hero/>
     </>
   )
 }

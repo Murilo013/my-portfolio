@@ -4,7 +4,7 @@ import TiltedCard from './TiltedCard';
 export default function Hero() {
   return (
     <section className="flex h-screen flex-row items-center justify-around px-40 text-white">
-      <div className="absolute top-170 left-30 transform rotate-270 origin-bottom-left text-gray-400 text-[60px] font-bold uppercase opacity-20 pointer-events-none">
+      <div className="absolute top-200 left-35 transform rotate-270 origin-bottom-left text-gray-400 text-[90px] font-medium uppercase opacity-20 pointer-events-none">
         BACKEND DEVELOPER
       </div>
       <div className="flex flex-col" style={{ minWidth: '550px', maxWidth: '450px' }}>
@@ -30,6 +30,7 @@ export default function Hero() {
       </div>
         <TiltedCard
           imageSrc="/img/avatar.png"
+          captionText="Murilo Amaral Icon"
           containerHeight="350px"
           containerWidth="350px"
           imageHeight="350px"

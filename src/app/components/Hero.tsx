@@ -9,12 +9,13 @@ export default function Hero() {
       </div>
       <div className="flex flex-col" style={{ minWidth: '550px', maxWidth: '450px' }}>
         <TextType 
-          text={["Olá! Murilo Aqui"]}
+          text={["Olá! Murilo Aqui","Seja bem vindo !"]}
           typingSpeed={70}
-          pauseDuration={200}
+          pauseDuration={3000}
           showCursor={true}
           cursorCharacter="|"
-          className="text-[70px] font-bold mb-4"
+          loop={true}
+          className="text-[70px] font-bold mb-4 "
         />
         <div className="flex gap-4">
           <a href="https://github.com/Murilo013" target="_blank">
@@ -31,11 +32,11 @@ export default function Hero() {
         <TiltedCard
           imageSrc="/img/avatar.png"
           captionText="Murilo Amaral Icon"
-          containerHeight="350px"
-          containerWidth="350px"
-          imageHeight="350px"
-          imageWidth="350px"
-          rotateAmplitude={12}
+          containerHeight="550px"
+          containerWidth="550px"
+          imageHeight="450px"
+          imageWidth="450px"
+          rotateAmplitude={30}
           scaleOnHover={1.2}
         />
     </section>

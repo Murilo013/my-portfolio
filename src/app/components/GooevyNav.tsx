@@ -2,6 +2,22 @@
 
 import { useRef, useEffect, useState } from 'react';
 
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+interface GooeyNavProps {
+  items: NavItem[];
+  animationTime?: number;
+  particleCount?: number;
+  particleDistances?: number[];
+  particleR?: number;
+  timeVariance?: number;
+  colors?: number[];
+  initialActiveIndex?: number;
+}
+
 const GooeyNav = ({
   items,
   animationTime = 600,
@@ -11,19 +27,19 @@ const GooeyNav = ({
   timeVariance = 300,
   colors = [1, 2, 3, 1, 2, 3, 1, 4],
   initialActiveIndex = 0
-}) => {
-  const containerRef = useRef(null);
-  const navRef = useRef(null);
-  const filterRef = useRef(null);
-  const textRef = useRef(null);
+}: GooeyNavProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLUListElement>(null);
+  const filterRef = useRef<HTMLSpanElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
   const [activeIndex, setActiveIndex] = useState(initialActiveIndex);
 
-  const noise = (n = 1) => n / 2 - Math.random() * n;
-  const getXY = (distance, pointIndex, totalPoints) => {
+  const noise = (n: number = 1): number => n / 2 - Math.random() * n;
+  const getXY = (distance: number, pointIndex: number, totalPoints: number): [number, number] => {
     const angle = ((360 + noise(8)) / totalPoints) * pointIndex * (Math.PI / 180);
     return [distance * Math.cos(angle), distance * Math.sin(angle)];
   };
-  const createParticle = (i, t, d, r) => {
+  const createParticle = (i: number, t: number, d: number[], r: number) => {
     let rotate = noise(r / 10);
     return {
       start: getXY(d[0], particleCount - i, particleCount),
@@ -34,7 +50,7 @@ const GooeyNav = ({
       rotate: rotate > 0 ? (rotate + r / 20) * 10 : (rotate - r / 20) * 10
     };
   };
-  const makeParticles = element => {
+  const makeParticles = (element: HTMLElement): void => {
     const d = particleDistances;
     const r = particleR;
     const bubbleTime = animationTime * 2 + timeVariance;
@@ -71,7 +87,7 @@ const GooeyNav = ({
       }, 30);
     }
   };
-  const updateEffectPosition = element => {
+  const updateEffectPosition = (element: HTMLElement): void => {
     if (!containerRef.current || !filterRef.current || !textRef.current) return;
     const containerRect = containerRef.current.getBoundingClientRect();
     const pos = element.getBoundingClientRect();
@@ -85,14 +101,14 @@ const GooeyNav = ({
     Object.assign(textRef.current.style, styles);
     textRef.current.innerText = element.innerText;
   };
-  const handleClick = (e, index) => {
-    const liEl = e.currentTarget;
+  const handleClick = (e: React.MouseEvent, index: number): void => {
+    const liEl = e.currentTarget as HTMLElement;
     if (activeIndex === index) return;
     setActiveIndex(index);
     updateEffectPosition(liEl);
     if (filterRef.current) {
       const particles = filterRef.current.querySelectorAll('.particle');
-      particles.forEach(p => filterRef.current.removeChild(p));
+      particles.forEach((p: Element) => filterRef.current?.removeChild(p));
     }
     if (textRef.current) {
       textRef.current.classList.remove('active');
@@ -103,24 +119,27 @@ const GooeyNav = ({
       makeParticles(filterRef.current);
     }
   };
-  const handleKeyDown = (e, index) => {
+  const handleKeyDown = (e: React.KeyboardEvent, index: number): void => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      const liEl = e.currentTarget.parentElement;
+      const liEl = e.currentTarget.parentElement as HTMLElement;
       if (liEl) {
-        handleClick({ currentTarget: liEl }, index);
+        const syntheticEvent = {
+          currentTarget: liEl
+        } as unknown as React.MouseEvent;
+        handleClick(syntheticEvent, index);
       }
     }
   };
   useEffect(() => {
     if (!navRef.current || !containerRef.current) return;
-    const activeLi = navRef.current.querySelectorAll('li')[activeIndex];
+    const activeLi = navRef.current.querySelectorAll('li')[activeIndex] as HTMLElement;
     if (activeLi) {
       updateEffectPosition(activeLi);
       textRef.current?.classList.add('active');
     }
     const resizeObserver = new ResizeObserver(() => {
-      const currentActiveLi = navRef.current?.querySelectorAll('li')[activeIndex];
+      const currentActiveLi = navRef.current?.querySelectorAll('li')[activeIndex] as HTMLElement;
       if (currentActiveLi) {
         updateEffectPosition(currentActiveLi);
       }

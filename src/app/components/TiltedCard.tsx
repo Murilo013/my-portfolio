@@ -8,22 +8,38 @@ const springValues = {
   mass: 2
 };
 
+interface TiltedCardProps {
+  imageSrc: string;
+  altText?: string;
+  captionText?: string;
+  containerHeight?: string;
+  containerWidth?: string;
+  imageHeight?: string;
+  imageWidth?: string;
+  scaleOnHover?: number;
+  rotateAmplitude?: number;
+  showMobileWarning?: boolean;
+  showTooltip?: boolean;
+  overlayContent?: React.ReactNode;
+  displayOverlayContent?: boolean;
+}
+
 export default function TiltedCard({
   imageSrc,
   altText = 'Tilted card image',
   captionText = '',
-  containerHeight = '300px',
+  containerHeight = '500px',
   containerWidth = '100%',
-  imageHeight = '300px',
-  imageWidth = '300px',
+  imageHeight = '100px',
+  imageWidth = '100px',
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
   showTooltip = true,
   overlayContent = null,
   displayOverlayContent = false
-}) {
-  const ref = useRef(null);
+}: TiltedCardProps) {
+  const ref = useRef<HTMLElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useSpring(useMotionValue(0), springValues);
@@ -38,7 +54,7 @@ export default function TiltedCard({
 
   const [lastY, setLastY] = useState(0);
 
-  function handleMouse(e) {
+  function handleMouse(e: { clientX: number; clientY: number; }) {
     if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
@@ -75,7 +91,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center overflow-visible"
+      className="relative w-full h-full [perspective:1000px] flex flex-col items-center justify-center overflow-visible"
       style={{
         height: containerHeight,
         width: containerWidth
@@ -103,7 +119,7 @@ export default function TiltedCard({
         <motion.img
           src={imageSrc}
           alt={altText}
-          className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
+          className="absolute top-0 left-0 object-cover will-change-transform [transform:translateZ(0)]"
           style={{
             width: imageWidth,
             height: imageHeight

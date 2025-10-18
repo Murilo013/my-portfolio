@@ -1,5 +1,5 @@
 import HoverPopover from "@/app/components/HoverPopover";
-import Carousel from "@/app/components/Carousel"
+import Carousel from "./Carousel";
 
 export default function MainContent() {
   return (
@@ -40,11 +40,10 @@ export default function MainContent() {
 
 
      <section>
-        <h1 className="text-[7rem] font-bold text-white opacity-20 pointer-events-none">
+        <h1 className="text-[7rem] font-bold text-white opacity-20 pointer-events-none text-center">
           PROJETOS
         </h1>
-        
-        <Carousel />
+        <Carousel/>
      </section>
 
     </div>

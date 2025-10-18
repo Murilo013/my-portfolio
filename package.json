@@ -11,6 +11,7 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
     "flowbite": "^3.1.2",
     "flowbite-react": "^0.12.9",
     "gsap": "^3.13.0",

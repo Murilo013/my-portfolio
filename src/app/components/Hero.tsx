@@ -4,10 +4,12 @@ import TiltedCard from './TiltedCard';
 export default function Hero() {
   return (
     <section className="flex h-screen flex-row items-center justify-around px-40 text-white">
+
       <div className="absolute top-200 left-35 transform rotate-270 origin-bottom-left text-gray-400 text-[90px] font-medium uppercase opacity-20 pointer-events-none">
         BACKEND DEVELOPER
       </div>
-      <div className="flex flex-col" style={{ minWidth: '550px', maxWidth: '450px' }}>
+
+      <div className="flex flex-col" style={{ minWidth: '550px', maxWidth: '450px', }}>
         <TextType 
           text={["Olá! Murilo Aqui","Seja bem vindo !"]}
           typingSpeed={70}
@@ -32,7 +34,7 @@ export default function Hero() {
         <TiltedCard
           imageSrc="/img/avatar.png"
           captionText="Murilo Amaral Icon"
-          containerHeight="550px"
+          containerHeight="650px"
           containerWidth="550px"
           imageHeight="450px"
           imageWidth="450px"

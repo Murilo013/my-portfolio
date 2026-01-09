@@ -1,5 +1,11 @@
+"use client";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 
-import { Button, Popover } from "flowbite-react";
+const Popover = dynamic(
+  () => import("flowbite-react").then(mod => mod.Popover),
+  { ssr: false }
+);
 
 interface HoverPopoverProps {
   src: string;
@@ -16,11 +22,9 @@ export default function HoverPopover({src, alt, label}: HoverPopoverProps) {
 
   return (
     <Popover content={content} trigger="hover" placement="top" arrow={false} className="border-none">
-        <img src={src} alt={alt} className="w-20 h-20 object-contain cursor-pointer transition-transform duration-200 hover:scale-110"
+        <Image src={src} alt={alt} width={80} height={80} className="w-20 h-20 object-contain cursor-pointer transition-transform duration-200 hover:scale-110"
         />
         
     </Popover>
   );
 }
-
-

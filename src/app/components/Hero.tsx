@@ -1,4 +1,5 @@
 import TextType from '@/app/components/textType'
+import Image from 'next/image';
 import TiltedCard from './TiltedCard';
 
 export default function Hero() {
@@ -21,10 +22,21 @@ export default function Hero() {
         />
         <div className="flex gap-4">
           <a href="https://github.com/Murilo013" target="_blank">
-            <img src="/img/github.png" alt="GitHub" className="w-15 transition-transform duration-200 hover:scale-125" />
+            <Image 
+            src="/img/github.png" 
+            alt="GitHub" 
+            width={150} 
+            height={150} 
+            className="w-15 transition-transform duration-200 hover:scale-125" />
           </a>
           <a href="https://www.linkedin.com/in/murilo-alessio-amaral/" target="_blank">
-            <img src="/img/linkedin.png" alt="LinkedIn" className="w-15 transition-transform duration-200 hover:scale-125" />
+            <Image 
+            src="/img/linkedin.png" 
+            alt="LinkedIn" 
+            width={150} 
+            height={150}
+            className="w-15 transition-transform duration-200 hover:scale-125" 
+            />
           </a>
           <svg className="w-15 h-15 text-gray-800 dark:text-white transition-transform duration-200 hover:scale-125 cursor-pointer " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>

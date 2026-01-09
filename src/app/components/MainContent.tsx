@@ -29,7 +29,7 @@ export default function MainContent() {
         <div className="grid grid-cols-5 gap-10 mb-60 mt-20 place-items-center">
           <HoverPopover src="/img/html-img.png" alt="HTML logo" label="HTML" />
           <HoverPopover src="/img/css-img.png" alt="CSS logo" label="CSS" />
-          <HoverPopover src="/img/csharp-img.png" alt="C# logo" label="C#" />
+          <HoverPopover src="/img/csharp-img.png" alt="C# logo" label="C#"/>
           <HoverPopover src="/img/java-img.png" alt="Java logo" label="Java" />
           <HoverPopover src="/img/js-img.png" alt="JavaScript logo" label="JavaScript" />
           <HoverPopover src="/img/ts-img.png" alt="TypeScript logo" label="TypeScript" />

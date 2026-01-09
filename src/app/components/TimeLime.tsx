@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function TimeLime() {
   const events = [
     {
@@ -77,7 +79,13 @@ export default function TimeLime() {
               {/* Ícone + linha */}
               <div className="relative flex flex-col items-center">
                 <div className="w-14 h-14 flex items-center justify-center text-2xl bg-white rounded-full font-bold shadow-lg">
-                    <img className="w-10 h-9" src={event.icon} alt="" />
+                    <Image 
+                    className="w-10 h-9" 
+                    src={event.icon} 
+                    alt="" 
+                    width={100} 
+                    height={100}
+                    />
                 </div>
               </div>
 

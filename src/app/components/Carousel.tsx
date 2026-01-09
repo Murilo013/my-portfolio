@@ -3,6 +3,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useCallback } from "react";
+import Image from "next/image";
 
 export default function ProjectsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -42,9 +43,11 @@ export default function ProjectsCarousel() {
 
                 <h3 className="text-2xl font-bold text-center my-5">{projeto.title}</h3>
 
-                <img
+                <Image
                   src={projeto.img}
                   alt={projeto.title}
+                  width={550}
+                  height={550}
                   className="shadow-md w-full h-56"
                 />
 
@@ -53,11 +56,13 @@ export default function ProjectsCarousel() {
                   <p className="text-white text-center mb-4">{projeto.description}</p>
                   <div className="flex items-center justify-center space-x-4 mt-4">
                     {projeto.tecs.map((tec, j) => (
-                      <img
+                      <Image
                         key={j}
                         src={tec}
                         alt={`Tecnologia ${j + 1}`}
                         className="h-8 w-8 mb-5"
+                        width={32}
+                        height={32}
                       />
                     ))}
                         </div>
@@ -65,7 +70,15 @@ export default function ProjectsCarousel() {
                       <div className="w-full bg-card p-4 mt-auto relative z-10">
                         <div className="flex items-center justify-center space-x-5"> 
                             <p>Repositório:</p>
-                            <a target="_blank" href={projeto.urlgithub}><img className="h-8 transition-transform duration-200 hover:scale-125 cursor-pointer" src="/img/github.png" alt="" /></a>
+                            <a target="_blank" href={projeto.urlgithub}>
+                              <Image 
+                              className="h-8 transition-transform duration-200 hover:scale-125 cursor-pointer" src="/img/github.png"
+                               alt="" 
+                               width={32} 
+                               height={32}
+                               />
+                        
+                               </a>
                         </div>
                       </div>
                     </div>

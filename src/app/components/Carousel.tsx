@@ -21,11 +21,11 @@ export default function ProjectsCarousel() {
 
     { title: "API Gerenciamento de Entregas", img: "/img/apiEntrega.png",urlgithub:"https://github.com/Murilo013/APIgerenciamentoDeCargas", tecs:["/img/csharp-img.png", "/img/azure-img.png", "/img/swagger-img.png","/img/postgresql.png"], description: "Aplicação de gerenciamento para transporte de cargas, permitindo o gerenciamento completo de motoristas, caminhões e entregas. A API oferece operações para cada entidade e suporta a associação de motoristas a caminhões e a atribuição de entregas a motoristas/caminhões."},
 
-    { title: "Controle de Estoque com Log", img: "",urlgithub:"https://github.com/Murilo013/ControleDeEstoque", tecs:["/img/java-img.png", "/img/postgresql.png"], description: "Sistema de controle de estoque com registro de logs de todas as operações."  },
+    { title: "Controle de Estoque com Log", img: "/img/EstoqueLog-img.png",urlgithub:"https://github.com/Murilo013/ControleDeEstoque", tecs:["/img/java-img.png", "/img/postgresql.png"], description: "Sistema de controle de estoque com registro de logs de todas as operações."  },
 
     { title: "Framework CRUD Java", img: "/img/frameworkJAVA-img.png",urlgithub:"https://github.com/Murilo013/FrameworkJava", tecs:["/img/java-img.png"], description: "Framework simples para criação de CRUDs em Java, abstraindo a complexidade do JDBC."  },
 
-    { title: "PanteraBOT", img: "",urlgithub:"https://github.com/Murilo013/PanteraBot", tecs:["/img/js-img.png","/img/nodejs-img.png","/img/puppeteer-img.png"], description: "Bot para Discord com diversas funcionalidades, como moderação, música e jogos."  },
+    { title: "PanteraBOT", img: "/img/panteraBOT.png",urlgithub:"https://github.com/Murilo013/PanteraBot", tecs:["/img/js-img.png","/img/nodejs-img.png","/img/puppeteer-img.png"], description: "Bot para Discord com diversas funcionalidades, como moderação, música e jogos."  },
   ];
 
   return (

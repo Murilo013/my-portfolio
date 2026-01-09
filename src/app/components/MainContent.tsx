@@ -1,10 +1,11 @@
 import HoverPopover from "@/app/components/HoverPopover";
 import Carousel from "./Carousel";
 import TimeLime from "./TimeLime";
+import Footer from "./Footer";
 
 export default function MainContent() {
   return (
-    <div className="flex flex-col items-center justify-center py-5 mb-10">
+    <div className="flex flex-col items-center justify-center">
       {/* Título de fundo */}
       <h1 id="about-me" className="text-[7rem] font-bold text-white opacity-20 pointer-events-none">
         SOBRE MIM
@@ -51,6 +52,8 @@ export default function MainContent() {
         </h1>
         <Carousel/>
      </section>
+
+    <Footer/>
 
     </div>
   );

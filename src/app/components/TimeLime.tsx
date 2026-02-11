@@ -39,58 +39,39 @@ export default function TimeLime() {
       year: "2023",
       icon: "/img/university-img.png",
       title: "Meu começo…",
-      description:
-        "Ano em que ingressei na faculdade no curso de Sistemas de Informação.",
+      description: "Ano em que ingressei na faculdade no curso de Sistemas de Informação.",
       side: "right",
     },
   ];
 
   return (
-    <div className="w-full text-white mt-30">
-      <div className="max-w-4xl mx-auto relative">
+    <div className="mt-16 w-full text-white sm:mt-24 lg:mt-30">
+      <div className="relative mx-auto max-w-4xl px-2 sm:px-4">
+        <div className="absolute left-6 top-0 h-full w-[3px] bg-white/30 sm:left-1/2 sm:-translate-x-1/2"></div>
 
-        {/* Linha vertical */}
-        <div className="absolute left-1/2 top-0 h-225 w-[3px] bg-white/40 transform -translate-x-1/2"></div>
-
-        <div className="space-y-20">
+        <div className="space-y-10 sm:space-y-16 lg:space-y-20">
           {events.map((event, i) => (
             <div
               key={i}
-              className={`flex items-start gap-6 ${
-                event.side === "left"
-                  ? "flex-row-reverse text-left"
-                  : "flex-row text-right"
+              className={`relative flex items-start gap-4 pl-14 sm:pl-0 ${
+                event.side === "left" ? "sm:flex-row-reverse sm:text-left" : "sm:flex-row sm:text-right"
               }`}
             >
-              {/* Conteúdo */}
-              <div className="w-1/2">
+              <div className="w-full sm:w-1/2">
+                <p className="text-lg font-bold sm:text-xl">{event.year}</p>
 
-                <p className="text-xl font-bold">{event.year}</p>
-
-                <h3 className="text-lg font-semibold mt-2">
-                  {event.title}
-                </h3>
-                <p className="text-sm mt-2 text-gray-300">{event.description}</p>
-                {event.work && (
-                  <p className="text-lg font-bold mt-1 text-gray-300">{event.work}</p>
-                )}
+                <h3 className="mt-2 text-base font-semibold sm:text-lg">{event.title}</h3>
+                <p className="mt-2 text-sm text-gray-300 sm:text-base">{event.description}</p>
+                {event.work && <p className="mt-2 text-sm font-bold text-gray-300 sm:text-lg">{event.work}</p>}
               </div>
 
-              {/* Ícone + linha */}
-              <div className="relative flex flex-col items-center">
-                <div className="w-14 h-14 flex items-center justify-center text-2xl bg-white rounded-full font-bold shadow-lg">
-                    <Image 
-                    className="w-10 h-9" 
-                    src={event.icon} 
-                    alt="" 
-                    width={100} 
-                    height={100}
-                    />
+              <div className="absolute left-0 top-0 sm:static sm:flex sm:flex-col sm:items-center">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-2xl font-bold shadow-lg sm:h-14 sm:w-14">
+                  <Image className="h-7 w-7 sm:h-9 sm:w-10" src={event.icon} alt="" width={100} height={100} />
                 </div>
               </div>
 
-              {/* Espaçador */}
-              <div className="w-1/2"></div>
+              <div className="hidden sm:block sm:w-1/2"></div>
             </div>
           ))}
         </div>

@@ -22,7 +22,7 @@ export default function HoverPopover({src, alt, label}: HoverPopoverProps) {
 
   return (
     <Popover content={content} trigger="hover" placement="top" arrow={false} className="border-none">
-        <Image src={src} alt={alt} width={80} height={80} className="w-20 h-20 object-contain cursor-pointer transition-transform duration-200 hover:scale-110"
+        <Image src={src} alt={alt} width={80} height={80} className="h-14 w-14 cursor-pointer object-contain transition-transform duration-200 hover:scale-110 sm:h-16 sm:w-16 lg:h-20 lg:w-20"
         />
         
     </Popover>

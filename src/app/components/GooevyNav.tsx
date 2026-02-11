@@ -289,11 +289,11 @@ const GooeyNav = ({
           }
         `}
       </style>
-      <div className="relative w-full max-w-full overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" ref={containerRef}>
-        <nav className="relative flex min-w-max" style={{ transform: 'translate3d(0,0,0.01px)' }}>
+      <div className="relative" ref={containerRef}>
+        <nav className="flex relative" style={{ transform: 'translate3d(0,0,0.01px)' }}>
           <ul
             ref={navRef}
-            className="relative z-[3] m-0 flex list-none gap-2 p-0 px-2 py-1 sm:gap-4 sm:px-4"
+            className="flex gap-8 list-none p-0 px-4 m-0 relative z-[3]"
             style={{
               color: 'white',
               textShadow: '0 1px 1px hsl(205deg 30% 10% / 0.2)'
@@ -310,7 +310,7 @@ const GooeyNav = ({
                   onClick={e => handleClick(e, index)}
                   href={item.href}
                   onKeyDown={e => handleKeyDown(e, index)}
-                  className="inline-block px-3 py-2 text-sm outline-none sm:px-4 sm:text-base"
+                  className="outline-none py-[0.6em] px-[1em] inline-block"
                 >
                   {item.label}
                 </a>

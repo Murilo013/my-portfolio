@@ -1,0 +1,172 @@
+/* ========================= */
+/* TIMELINE BASE            */
+/* ========================= */
+
+.timeline-container {
+  width: 100%;
+  color: white;
+  margin-top: 4rem;
+}
+
+.timeline-max-width {
+  max-width: 56rem;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1rem;
+}
+
+/* Linha central */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%);
+}
+
+/* Espaçamento vertical */
+.timeline-space {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* Item */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  /* Animação inicial */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Quando visível */
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Alternância */
+.timeline-left {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.timeline-right {
+  flex-direction: row;
+  text-align: right;
+}
+
+/* Conteúdo ocupa metade */
+.timeline-content {
+  width: 50%;
+}
+
+/* Espaçador invisível */
+.timeline-spacer {
+  width: 50%;
+}
+
+/* Texto */
+.timeline-year {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.timeline-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.timeline-description {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: rgb(209, 213, 219);
+}
+
+.timeline-work {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.25rem;
+  color: rgb(209, 213, 219);
+}
+
+/* Ícone central */
+.timeline-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.timeline-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 9999px;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-icon-img {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+/* ========================= */
+/* Responsividade           */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .timeline-space {
+    gap: 3rem;
+  }
+
+  .timeline-year {
+    font-size: 1rem;
+  }
+
+  .timeline-title {
+    font-size: 0.95rem;
+  }
+
+  .timeline-description {
+    font-size: 0.8rem;
+  }
+
+  .timeline-work {
+    font-size: 0.85rem;
+  }
+
+  .timeline-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .timeline-icon-img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content {
+    width: 45%;
+  }
+
+  .timeline-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}

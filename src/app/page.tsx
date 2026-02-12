@@ -5,7 +5,6 @@ import GooeyNav from "@/app/components/GooevyNav";
 export default function Home() {
 
 const items = [
-  { label: "Home", href: "#" },
   { label: "Sobre Mim", href: "#about-me" },
   { label: "Skills", href: "#skills" },
   { label: "Projetos", href: "#projects" },

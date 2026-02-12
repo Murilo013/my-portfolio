@@ -1,0 +1,160 @@
+/* ========================= */
+/* Base = Mobile            */
+/* ========================= */
+
+.hero-section {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  color: white;
+  position: relative;
+  text-align: center;
+  gap: 2rem;
+}
+
+.hero-backdrop {
+  position: absolute;
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(107, 114, 128);
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.1;
+  pointer-events: none;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.hero-social-icon,
+.hero-social-svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.hero-social-icon:hover,
+.hero-social-svg:hover {
+  transform: scale(1.15);
+}
+
+
+/* ========================= */
+/* Extra small mobile       */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1.5rem 0.75rem;
+    gap: 1.5rem;
+  }
+
+  .hero-backdrop {
+    font-size: 1.5rem;
+    top: -8rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-social {
+    gap: 1rem;
+  }
+
+  .hero-social-icon,
+  .hero-social-svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+
+/* ========================= */
+/* Tablet (768px+)          */
+/* ========================= */
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+
+/* ========================= */
+/* Desktop (1024px+)        */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .hero-section {
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    gap: 0;
+  }
+
+  .hero-backdrop {
+    top: 12.5rem;
+    left: 2.25rem;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    font-size: 5.625rem;
+    opacity: 0.2;
+  }
+
+  .hero-content {
+    min-width: 650px;
+    max-width: 650px;
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-social {
+    justify-content: flex-start;
+  }
+
+  .hero-social-icon,
+  .hero-social-svg {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .hero-social-icon:hover,
+  .hero-social-svg:hover {
+    transform: scale(1.25);
+  }
+}

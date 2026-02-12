@@ -2,18 +2,19 @@ import HoverPopover from "@/app/components/HoverPopover";
 import Carousel from "./Carousel";
 import TimeLime from "./TimeLime";
 import Footer from "./Footer";
+import "./MainContent.css";
 
 export default function MainContent() {
   return (
     <div className="flex flex-col items-center justify-center">
       {/* Título de fundo */}
-      <h1 id="about-me" className="text-[7rem] font-bold text-white opacity-20 pointer-events-none">
+      <h1 id="about-me" className="main-title-bg">
         SOBRE MIM
       </h1>
 
       {/* Conteúdo */}
-      <section  className="max-w-7xl text-center px-8 my-20">
-        <p className="text-white text-[2rem] leading-relaxed ">
+      <section  className="main-section">
+        <p className="main-text">
           Sou estudante de Sistemas de Informação e atualmente atuo como estagiário de TI, com foco em desenvolvimento back-end e análise de dados. Tenho experiência em C#, SQL Server, TypeScript, Java, versionamento de código com Git e Azure DevOps, além de ferramentas como Power BI e Crystal Reports.
           <br />
           <br />
@@ -22,11 +23,11 @@ export default function MainContent() {
         <TimeLime/>
       </section>
 
-      <section className="max-w-7xl text-center px-8">
-        <h1 id="skills" className="text-[7rem] font-bold text-white opacity-20 pointer-events-none">
+      <section className="skills-section">
+        <h1 id="skills" className="main-title-bg">
           SKILLS
         </h1>
-        <div className="grid grid-cols-5 gap-10 mb-60 mt-20 place-items-center">
+        <div className="skills-grid">
           <HoverPopover src="/img/html-img.png" alt="HTML logo" label="HTML" />
           <HoverPopover src="/img/css-img.png" alt="CSS logo" label="CSS" />
           <HoverPopover src="/img/csharp-img.png" alt="C# logo" label="C#"/>
@@ -46,8 +47,8 @@ export default function MainContent() {
 
 
 
-     <section>
-        <h1 id="projects" className="text-[7rem] font-bold text-white opacity-20 pointer-events-none text-center">
+     <section className="projects-section">
+        <h1 id="projects" className="main-title-bg">
           PROJETOS
         </h1>
         <Carousel/>

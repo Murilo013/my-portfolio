@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useCallback } from "react";
 import Image from "next/image";
+import "./Carousel.css";
 
 export default function ProjectsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -30,49 +31,49 @@ export default function ProjectsCarousel() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16 relative">
+    <section className="carousel-section">
       {/* Área principal do carrossel */}
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex">
+      <div className="carousel-container" ref={emblaRef}>
+        <div className="carousel-wrapper">
           {projects.map((projeto, i) => (
             <div
               key={i}
-              className="flex-[0_0_33.333%] p-4 group" // mostra 3 por vez
+              className="carousel-item group" // mostra 3 por vez em desktop, 1 por vez em mobile
             >
-              <div className="rounded-xl border border-border bg-card flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_25px_hsl(var(--primary)/0.4)] overflow-hidden relative">
+              <div className="carousel-card">
 
-                <h3 className="text-2xl font-bold text-center my-5">{projeto.title}</h3>
+                <h3 className="carousel-title">{projeto.title}</h3>
 
                 <Image
                   src={projeto.img}
                   alt={projeto.title}
                   width={550}
                   height={550}
-                  className="shadow-md w-full h-56"
+                  className="carousel-image"
                 />
 
-                <div className="absolute inset-0 bg-card bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                <div className="carousel-overlay group-hover:opacity-100">
                   
-                  <p className="text-white text-center mb-4">{projeto.description}</p>
-                  <div className="flex items-center justify-center space-x-4 mt-4">
+                  <p className="carousel-description">{projeto.description}</p>
+                  <div className="carousel-tech-container">
                     {projeto.tecs.map((tec, j) => (
                       <Image
                         key={j}
                         src={tec}
                         alt={`Tecnologia ${j + 1}`}
-                        className="h-8 w-8 mb-5"
+                        className="carousel-tech-img"
                         width={32}
                         height={32}
                       />
                     ))}
                         </div>
                       </div>
-                      <div className="w-full bg-card p-4 mt-auto relative z-10">
-                        <div className="flex items-center justify-center space-x-5"> 
+                      <div className="carousel-footer">
+                        <div className="carousel-repo-container"> 
                             <p>Repositório:</p>
-                            <a target="_blank" href={projeto.urlgithub}>
+                            <a target="_blank" href={projeto.urlgithub} className="carousel-repo-link">
                               <Image 
-                              className="h-8 transition-transform duration-200 hover:scale-125 cursor-pointer" src="/img/github.png"
+                              className="carousel-repo-img" src="/img/github.png"
                                alt="" 
                                width={32} 
                                height={32}
@@ -89,15 +90,13 @@ export default function ProjectsCarousel() {
       {/* Botões laterais */}
       <button
         onClick={scrollPrev}
-        className="absolute text-black -left-10 top-1/2 -translate-y-1/2 rounded-full p-2 shadow-md transition
-         bg-white opacity-20 hover:bg-white hover:opacity-100 hover:text-black cursor-pointer"
+        className="carousel-nav-btn carousel-nav-btn-prev"
       >
         <ArrowLeft className="w-5 h-5" />
       </button>
       <button
         onClick={scrollNext}
-        className="absolute text-black -right-10 top-1/2 -translate-y-1/2 rounded-full p-2 shadow-md transition
-         bg-white opacity-20 hover:bg-white hover:opacity-100 hover:text-black cursor-pointer"
+        className="carousel-nav-btn carousel-nav-btn-next"
       >
         <ArrowRight className="w-5 h-5" />
       </button>

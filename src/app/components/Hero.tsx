@@ -1,16 +1,17 @@
 import TextType from '@/app/components/textType'
 import Image from 'next/image';
 import TiltedCard from './TiltedCard';
+import "./Hero.css";
 
 export default function Hero() {
   return (
-    <section className="flex h-screen flex-row items-center justify-around px-40 text-white">
+    <section className="hero-section">
 
-      <div className="absolute top-200 left-35 transform rotate-270 origin-bottom-left text-gray-400 text-[90px] font-medium uppercase opacity-20 pointer-events-none">
+      <div className="hero-backdrop">
         BACKEND DEVELOPER
       </div>
 
-      <div className="flex flex-col" style={{ minWidth: '550px', maxWidth: '450px', }}>
+      <div className="hero-content">
         <TextType 
           text={["Olá! Murilo Aqui","Seja bem vindo !"]}
           typingSpeed={70}
@@ -18,16 +19,16 @@ export default function Hero() {
           showCursor={true}
           cursorCharacter="|"
           loop={true}
-          className="text-[70px] font-bold mb-4 "
+          className="hero-title"
         />
-        <div className="flex gap-4">
+        <div className="hero-social">
           <a href="https://github.com/Murilo013" target="_blank">
             <Image 
             src="/img/github.png" 
             alt="GitHub" 
             width={150} 
             height={150} 
-            className="w-15 transition-transform duration-200 hover:scale-125" />
+            className="hero-social-icon" />
           </a>
           <a href="https://www.linkedin.com/in/murilo-alessio-amaral/" target="_blank">
             <Image 
@@ -35,10 +36,10 @@ export default function Hero() {
             alt="LinkedIn" 
             width={150} 
             height={150}
-            className="w-15 transition-transform duration-200 hover:scale-125" 
+            className="hero-social-icon" 
             />
           </a>
-          <svg className="w-15 h-15 text-gray-800 dark:text-white transition-transform duration-200 hover:scale-125 cursor-pointer " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+          <svg className="hero-social-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
           </svg>
         </div>
@@ -46,10 +47,10 @@ export default function Hero() {
         <TiltedCard
           imageSrc="/img/avatar.png"
           captionText="Murilo Amaral Icon"
-          containerHeight="650px"
-          containerWidth="550px"
-          imageHeight="450px"
-          imageWidth="450px"
+          containerHeight="500px"
+          containerWidth="420px"
+          imageHeight="350px"
+          imageWidth="350px"
           rotateAmplitude={30}
           scaleOnHover={1.2}
         />

@@ -34,8 +34,8 @@ export default function TiltedCard({
   imageWidth = '100px',
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
-  showMobileWarning = true,
-  showTooltip = true,
+  showMobileWarning = false,
+  showTooltip = false,
   overlayContent = null,
   displayOverlayContent = false
 }: TiltedCardProps) {
@@ -102,7 +102,7 @@ export default function TiltedCard({
     >
       {showMobileWarning && (
         <div className="absolute top-4 text-center text-sm block sm:hidden">
-          This effect is not optimized for mobile. Check on desktop.
+          
         </div>
       )}
 

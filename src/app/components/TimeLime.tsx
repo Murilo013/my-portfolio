@@ -1,4 +1,8 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
+import "./TimeLime.css";
 
 export default function TimeLime() {
   const events = [
@@ -45,52 +49,76 @@ export default function TimeLime() {
     },
   ];
 
+  useEffect(() => {
+    const items = document.querySelectorAll(".timeline-item");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="w-full text-white mt-30">
-      <div className="max-w-4xl mx-auto relative">
+    <div className="timeline-container">
+      <div className="timeline-max-width">
 
         {/* Linha vertical */}
-        <div className="absolute left-1/2 top-0 h-225 w-[3px] bg-white/40 transform -translate-x-1/2"></div>
+        <div className="timeline-line"></div>
 
-        <div className="space-y-20">
+        <div className="timeline-space">
           {events.map((event, i) => (
             <div
               key={i}
-              className={`flex items-start gap-6 ${
+              className={`timeline-item ${
                 event.side === "left"
-                  ? "flex-row-reverse text-left"
-                  : "flex-row text-right"
+                  ? "timeline-left"
+                  : "timeline-right"
               }`}
             >
               {/* Conteúdo */}
-              <div className="w-1/2">
+              <div className="timeline-content">
+                <p className="timeline-year">{event.year}</p>
 
-                <p className="text-xl font-bold">{event.year}</p>
-
-                <h3 className="text-lg font-semibold mt-2">
+                <h3 className="timeline-title">
                   {event.title}
                 </h3>
-                <p className="text-sm mt-2 text-gray-300">{event.description}</p>
+
+                <p className="timeline-description">
+                  {event.description}
+                </p>
+
                 {event.work && (
-                  <p className="text-lg font-bold mt-1 text-gray-300">{event.work}</p>
+                  <p className="timeline-work">{event.work}</p>
                 )}
               </div>
 
-              {/* Ícone + linha */}
-              <div className="relative flex flex-col items-center">
-                <div className="w-14 h-14 flex items-center justify-center text-2xl bg-white rounded-full font-bold shadow-lg">
-                    <Image 
-                    className="w-10 h-9" 
-                    src={event.icon} 
-                    alt="" 
-                    width={100} 
+              {/* Ícone central */}
+              <div className="timeline-icon-wrapper">
+                <div className="timeline-icon">
+                  <Image
+                    className="timeline-icon-img"
+                    src={event.icon}
+                    alt=""
+                    width={100}
                     height={100}
-                    />
+                  />
                 </div>
               </div>
 
               {/* Espaçador */}
-              <div className="w-1/2"></div>
+              <div className="timeline-spacer"></div>
             </div>
           ))}
         </div>

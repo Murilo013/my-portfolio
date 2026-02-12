@@ -1,0 +1,118 @@
+/* ========================= */
+/* Base = Mobile (padrão)   */
+/* ========================= */
+
+.main-title-bg {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.main-section {
+  max-width: 100%;
+  text-align: center;
+  padding: 0 1rem;
+  margin: 2rem 0;
+}
+
+.main-text {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.skills-section {
+  max-width: 100%;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 10rem;
+  margin-top: 2rem;
+  place-items: center;
+}
+
+.projects-section {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* ========================= */
+/* Extra small mobile (480px) */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .main-title-bg {
+    font-size: 2rem;
+  }
+
+  .main-section {
+    padding: 0 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .main-text {
+    font-size: 0.9rem;
+  }
+
+  .skills-section {
+    padding: 0 0.75rem;
+  }
+
+  .skills-grid {
+    gap: 1rem;
+  }
+}
+
+
+/* ========================= */
+/* Tablet (768px+)          */
+/* ========================= */
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ========================= */
+/* Desktop (1024px+)        */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .main-title-bg {
+    font-size: 7rem;
+  }
+
+  .main-section {
+    max-width: 80rem;
+    padding: 0 2rem;
+    margin: 5rem auto;
+  }
+
+  .main-text {
+    font-size: 2rem;
+    line-height: 1.8;
+  }
+
+  .skills-section {
+    max-width: 80rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 15rem;
+    margin-top: 5rem;
+  }
+}

@@ -1,0 +1,43 @@
+/* ========================= */
+/* Base = Mobile            */
+/* ========================= */
+
+.skill-logo {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.skill-logo:hover {
+  transform: scale(1.05);
+}
+
+
+/* ========================= */
+/* Tablet (768px+)          */
+/* ========================= */
+
+@media (min-width: 768px) {
+  .skill-logo {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .skill-logo:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+/* ========================= */
+/* Desktop (1024px+)        */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .skill-logo {
+    width: 5rem;
+    height: 5rem;
+  }
+}

@@ -14,18 +14,24 @@ interface HoverPopoverProps {
   label: string;
 }
 
-export default function HoverPopover({src, alt, label}: HoverPopoverProps) {
+export default function HoverPopover({ src, alt, label }: HoverPopoverProps) {
   const content = (
     <div className="text-center px-3 py-2 text-lg text-white font-bold bg-[#3999FE] rounded-md">
-        {label}
+      {label}
     </div>
   );
 
   return (
-    <Popover content={content} trigger="hover" placement="top" arrow={false} className="border-none">
-        <Image src={src} alt={alt} width={80} height={80} className="skill-logo"
-        />
-        
+    <Popover
+      content={content}
+      trigger="hover"
+      placement="top"
+      arrow={false}
+      className="border-none"
+    >
+      <div className="skill-wrapper">
+        <Image src={src} alt={alt} width={64} height={64} className="skill-image" />
+      </div>
     </Popover>
   );
 }

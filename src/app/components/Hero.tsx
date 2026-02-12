@@ -39,21 +39,40 @@ export default function Hero() {
             className="hero-social-icon" 
             />
           </a>
-          <svg className="hero-social-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-          </svg>
+          <a 
+  href="/Currículo - Murilo A. Amaral.pdf" 
+  download="Currículo - Murilo A. Amaral.pdf"
+>
+  <svg 
+    className="hero-social-svg" 
+    aria-hidden="true" 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 16 18"
+  >
+    <path 
+      stroke="currentColor" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      strokeWidth="2" 
+      d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
+    />
+  </svg>
+</a>
         </div>
       </div>
-        <TiltedCard
-          imageSrc="/img/avatar.png"
-          captionText="Murilo Amaral Icon"
-          containerHeight="500px"
-          containerWidth="420px"
-          imageHeight="350px"
-          imageWidth="350px"
-          rotateAmplitude={30}
-          scaleOnHover={1.2}
-        />
+        <div className="hero-card">
+          <TiltedCard
+            imageSrc="/img/avatar.png"
+            captionText="Murilo Amaral Icon"
+            containerHeight="100%"
+            containerWidth="100%"
+            imageHeight="100%"
+            imageWidth="100%"
+            rotateAmplitude={30}
+            scaleOnHover={1.1}
+          />
+        </div>
     </section>
   );
 }

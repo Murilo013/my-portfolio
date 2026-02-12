@@ -2,6 +2,11 @@
 /* Base = Mobile            */
 /* ========================= */
 
+.hero-card {
+  width: 250px;
+  height: 250px;
+}
+
 .hero-section {
   display: flex;
   height: auto;
@@ -17,17 +22,16 @@
 
 .hero-backdrop {
   position: absolute;
-  top: -10rem;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   color: rgb(107, 114, 128);
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
-  opacity: 0.1;
+  opacity: 0.08;
   pointer-events: none;
-  width: 100%;
-  text-align: center;
+  white-space: nowrap;
 }
 
 .hero-content {
@@ -106,6 +110,11 @@
   .hero-title {
     font-size: 3rem;
   }
+
+  .hero-card {
+    width: 350px;
+    height: 400px;
+  }
 }
 
 
@@ -114,6 +123,11 @@
 /* ========================= */
 
 @media (min-width: 1024px) {
+.hero-card {
+    width: 420px;
+    height: 500px;
+  }
+
   .hero-section {
     height: 100vh;
     flex-direction: row;
@@ -123,13 +137,12 @@
     gap: 0;
   }
 
-  .hero-backdrop {
-    top: 12.5rem;
-    left: 2.25rem;
-    transform: rotate(-90deg);
-    transform-origin: bottom left;
-    font-size: 5.625rem;
-    opacity: 0.2;
+ .hero-backdrop {
+    top: 44%;
+    left: 3%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 5.5rem;
+    opacity: 0.25;
   }
 
   .hero-content {

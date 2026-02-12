@@ -28,11 +28,13 @@ export default function ProjectsCarousel() {
     { title: "Framework CRUD Java", img: "/img/frameworkJAVA-img.png",urlgithub:"https://github.com/Murilo013/FrameworkJava", tecs:["/img/java-img.png"], description: "Framework simples para criação de CRUDs em Java, abstraindo a complexidade do JDBC."  },
 
     { title: "PanteraBOT", img: "/img/panteraBOT.png",urlgithub:"https://github.com/Murilo013/PanteraBot", tecs:["/img/js-img.png","/img/nodejs-img.png","/img/puppeteer-img.png"], description: "Bot para Discord com diversas funcionalidades, como moderação, música e jogos."  },
+
+     { title: "Gerenciador de Agendamento", img: "/img/GestaoAgendamento.png", urlgithub:"https://lash-glow-link.base44.app", tecs:["/img/base44.png"], description: "Página de gerenciamento de agendamentos de serviços de extensão de cílios, com página de dashboard para visualização geral dos resultados, desenvolvida através da ferramenta Base44, com uma estrutura de prompts adequada"  },
   ];
 
   return (
     <section className="carousel-section">
-      {/* Área principal do carrossel */}
+      {/* Área principal do carrossel */} 
       <div className="carousel-container" ref={emblaRef}>
         <div className="carousel-wrapper">
           {projects.map((projeto, i) => (

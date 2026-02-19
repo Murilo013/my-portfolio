@@ -63,7 +63,7 @@ export default function Hero() {
       </div>
         <div className="hero-card">
           <TiltedCard
-            imageSrc="/img/avatar.png"
+            imageSrc="/img/eu2.png"
             captionText="Murilo Amaral Icon"
             containerHeight="100%"
             containerWidth="100%"

@@ -30,7 +30,7 @@ export default function HoverPopover({ src, alt, label }: HoverPopoverProps) {
       className="border-none"
     >
       <div className="skill-wrapper">
-        <Image src={src} alt={alt} width={64} height={64} className="skill-image" />
+        <Image src={src} alt={alt} width={96} height={96} className="skill-image" />
       </div>
     </Popover>
   );

@@ -124,8 +124,8 @@
 
 @media (min-width: 1024px) {
 .hero-card {
-    width: 420px;
-    height: 500px;
+    width: 550px;
+    height: 550px; /* mesma altura da largura */
   }
 
   .hero-section {

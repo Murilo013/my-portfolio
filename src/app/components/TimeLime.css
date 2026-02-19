@@ -138,7 +138,7 @@
   }
 
   .timeline-title {
-    font-size: 0.95rem;
+    font-size: 0.80rem;
   }
 
   .timeline-description {
@@ -146,7 +146,7 @@
   }
 
   .timeline-work {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .timeline-icon {
@@ -156,7 +156,7 @@
 
   .timeline-icon-img {
     width: 1.5rem;
-    height: 1.5rem;
+    height: 1.3rem;
   }
 }
 

@@ -11,16 +11,16 @@ export default function TimeLime() {
       icon: "/img/notebook-img.png",
       title: "Entrada no mercado de trabalho",
       description:
-        "Meu primeiro estágio, onde estou aprendendo muito, podendo evoluir tanto tecnicamente como pessoa.",
-      work: "Gelog — 07/2025 → O momento",
+        "Início da minha trajetória profissional como estagiário de TI, atuando no desenvolvimento de soluções internas e automações. Desenvolvimento de scripts em Python para coleta e tratamento de dados, criação de views e consultas SQL estratégicas, além de apoio na construção de dashboards no Power BI. Evoluindo diariamente tanto tecnicamente quanto na responsabilidade sobre entregas e processos.",
+      work: "Gelog — 07/2025 → Atual",
       side: "right",
     },
     {
       year: "2024",
       icon: "/img/trophy-img.png",
       title: "Primeiro Hackaton",
-      description:
-        "Eu e minha equipe nos desafiamos em um hackaton organizado pela faculdade. Conseguimos o 3º lugar e foi uma experiência sensacional.",
+      description: "Participação em hackathon acadêmico, desenvolvendo uma solução funcional em equipe sob pressão e prazo limitado. Experiência prática com arquitetura, divisão de tarefas e entrega de produto.",
+
       side: "left",
     },
     {
@@ -28,7 +28,7 @@ export default function TimeLime() {
       icon: "/img/university-img.png",
       title: "Continuidade nos estudos",
       description:
-        "Descobri vários caminhos que a tecnologia oferece, mas me identifiquei com backend. Desde então venho me especializando cada vez mais.",
+"Definição de foco profissional em desenvolvimento back-end. Aprofundamento em C#, APIs, modelagem de banco de dados e boas práticas de código.",
       side: "right",
     },
     {
@@ -36,7 +36,7 @@ export default function TimeLime() {
       icon: "/img/notebook-img.png",
       title: "Começando com o pé direito",
       description:
-        "No mesmo ano que ingressei na faculdade, comecei cursos de desenvolvimento web (HTML, CSS, JS) para entender o mundo que estava entrando.",
+  "Início dos estudos em desenvolvimento web e fundamentos de programação (HTML, CSS, JavaScript), construindo a base para evolução técnica.",
       side: "left",
     },
     {
@@ -44,7 +44,7 @@ export default function TimeLime() {
       icon: "/img/university-img.png",
       title: "Meu começo…",
       description:
-        "Ano em que ingressei na faculdade no curso de Sistemas de Informação.",
+  "Ingresso no curso de Sistemas de Informação, iniciando minha jornada na área de tecnologia.",
       side: "right",
     },
   ];

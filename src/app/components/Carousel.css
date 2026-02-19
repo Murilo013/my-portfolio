@@ -232,6 +232,7 @@
 
   .carousel-card:hover .carousel-overlay {
     opacity: 1;
+    background-color: var(--card);
   }
 
   .carousel-description {
@@ -301,10 +302,9 @@
     padding: 0.375rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    background: white;
-    opacity: 0.2;
+    background: rgb(36, 36, 36);
     cursor: pointer;
-    color: black;
+    color: rgb(255, 255, 255);
   }
 
   .carousel-nav-btn:hover {

@@ -28,7 +28,7 @@ export default function TiltedCard({
   imageSrc,
   altText = 'Tilted card image',
   captionText = '',
-  containerHeight = '500px',
+  containerHeight = '100%',
   containerWidth = '100%',
   imageHeight = '100px',
   imageWidth = '100px',
@@ -37,7 +37,7 @@ export default function TiltedCard({
   showMobileWarning = false,
   showTooltip = false,
   overlayContent = null,
-  displayOverlayContent = false
+  displayOverlayContent = false,
 }: TiltedCardProps) {
   const ref = useRef<HTMLElement>(null);
   const x = useMotionValue(0);

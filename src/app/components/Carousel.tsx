@@ -16,18 +16,35 @@ export default function ProjectsCarousel() {
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
+  const cs = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+  const css = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+  const html = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+  const java = "cc/devicon@latest/icons/java/java-original.svg"
+  const js = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+  const nodejs = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+  const postgresql = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+  const puppeteer = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/puppeteer/puppeteer-original.svg"
+  const typescript = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+  const base44 = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/base44/base44-original.svg"
+  const sqlserver = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+  const azure = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+  const swagger = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"
+
+
+  
+
   const projects = [
-    { title: "Cine+ API", img: "/img/cineApi.png", urlgithub:"https://github.com/Murilo013/ApiAppCine", tecs:["/img/csharp-img.png", "/img/postgresql.png", "/img/azure-img.png", "/img/swagger-img.png"], description: "API para um aplicativo de cinema, com funcionalidades de CRUD para filmes, sessões e ingressos." },
+    { title: "Cine+ API", img: "/img/cineApi.png", urlgithub:"https://github.com/Murilo013/ApiAppCine", tecs:[cs, postgresql, azure, swagger], description: "API para um aplicativo de cinema, com funcionalidades de CRUD para filmes, sessões e ingressos." },
 
-    { title: "Cine+ FrontEnd", img: "/img/cine+.jpg", urlgithub:"https://github.com/Murilo013/AppCineFront", tecs:["/img/csharp-img.png"], description: "Interface para o aplicativo de cinema, consumindo a Cine+ API para exibir filmes e sessões." },
+    { title: "Cine+ FrontEnd", img: "/img/cine+.jpg", urlgithub:"https://github.com/Murilo013/AppCineFront", tecs:[cs], description: "Interface para o aplicativo de cinema, consumindo a Cine+ API para exibir filmes e sessões." },
 
-    { title: "API Gerenciamento de Entregas", img: "/img/apiEntrega.png",urlgithub:"https://github.com/Murilo013/APIgerenciamentoDeCargas", tecs:["/img/csharp-img.png", "/img/azure-img.png", "/img/swagger-img.png","/img/postgresql.png"], description: "Aplicação de gerenciamento para transporte de cargas, permitindo o gerenciamento completo de motoristas, caminhões e entregas. A API oferece operações para cada entidade e suporta a associação de motoristas a caminhões e a atribuição de entregas a motoristas/caminhões."},
+    { title: "API Gerenciamento de Entregas", img: "/img/apiEntrega.png",urlgithub:"https://github.com/Murilo013/APIgerenciamentoDeCargas", tecs:[cs, azure, swagger, postgresql], description: "Aplicação de gerenciamento para transporte de cargas, permitindo o gerenciamento completo de motoristas, caminhões e entregas. A API oferece operações para cada entidade e suporta a associação de motoristas a caminhões e a atribuição de entregas a motoristas/caminhões."},
 
-    { title: "Controle de Estoque com Log", img: "/img/EstoqueLog-img.png",urlgithub:"https://github.com/Murilo013/ControleDeEstoque", tecs:["/img/java-img.png", "/img/postgresql.png"], description: "Sistema de controle de estoque com registro de logs de todas as operações."  },
+    { title: "Controle de Estoque com Log", img: "/img/EstoqueLog-img.png",urlgithub:"https://github.com/Murilo013/ControleDeEstoque", tecs:[java, postgresql], description: "Sistema de controle de estoque com registro de logs de todas as operações."  },
 
-    { title: "Framework CRUD Java", img: "/img/frameworkJAVA-img.png",urlgithub:"https://github.com/Murilo013/FrameworkJava", tecs:["/img/java-img.png"], description: "Framework simples para criação de CRUDs em Java, abstraindo a complexidade do JDBC."  },
+    { title: "Framework CRUD Java", img: "/img/frameworkJAVA-img.png",urlgithub:"https://github.com/Murilo013/FrameworkJava", tecs:[java], description: "Framework simples para criação de CRUDs em Java, abstraindo a complexidade do JDBC."  },
 
-    { title: "PanteraBOT", img: "/img/panteraBOT.png",urlgithub:"https://github.com/Murilo013/PanteraBot", tecs:["/img/js-img.png","/img/nodejs-img.png","/img/puppeteer-img.png"], description: "Bot para Discord com diversas funcionalidades, como moderação, música e jogos."  },
+    { title: "PanteraBOT", img: "/img/panteraBOT.png",urlgithub:"https://github.com/Murilo013/PanteraBot", tecs:[js, nodejs, puppeteer], description: "Bot para Discord com diversas funcionalidades, como moderação, música e jogos."  },
 
      { title: "Gerenciador de Agendamento", img: "/img/GestaoAgendamento.png", urlgithub:"https://lash-glow-link.base44.app", tecs:["/img/base44.png"], description: "Página de gerenciamento de agendamentos de serviços de extensão de cílios, com página de dashboard para visualização geral dos resultados, desenvolvida através da ferramenta Base44, com uma estrutura de prompts adequada"  },
   ];
@@ -40,7 +57,7 @@ export default function ProjectsCarousel() {
           {projects.map((projeto, i) => (
             <div
               key={i}
-              className="carousel-item group" // mostra 3 por vez em desktop, 1 por vez em mobile
+              className="carousel-item group"
             >
               <div className="carousel-card">
 

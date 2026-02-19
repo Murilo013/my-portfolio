@@ -13,35 +13,39 @@ export default function MainContent() {
       </h1>
 
       {/* Conteúdo */}
-      <section  className="main-section">
+      <section className="main-section">
         <p className="main-text">
-          Sou estudante de Sistemas de Informação e atualmente atuo como estagiário de TI, com foco em desenvolvimento back-end e análise de dados. Tenho experiência em C#, SQL Server, TypeScript, Java, versionamento de código com Git e Azure DevOps, além de ferramentas como Power BI e Crystal Reports.
+          Sou estudante de Sistemas de Informação e atuo como estagiário de TI com foco em desenvolvimento back-end e engenharia de dados aplicada ao negócio. Desenvolvo APIs e soluções em C#, trabalho com modelagem e otimização de bancos SQL Server, criação de views estratégicas e integração entre sistemas.
           <br />
           <br />
-          Também realizo suporte aos sistemas corporativos, Rodopar e Microled, garantindo estabilidade e eficiência nas operações. Busco constantemente aprimorar meus conhecimentos em desenvolvimento, banco de dados e novas tecnologias, entregando soluções seguras, práticas e que agreguem valor ao negócio.
+          Também desenvolvo scripts em Python para coleta, tratamento e automação de dados, apoiando a construção de dashboards e indicadores no Power BI. Tenho experiência com TypeScript, C#, Python, versionamento com Git e Azure DevOps, sempre priorizando código limpo, performance e organização.
+          <br />
+          <br />
+          Meu objetivo é evoluir constantemente como desenvolvedor, criando soluções escaláveis, seguras e orientadas a resultados.
         </p>
         <TimeLime/>
       </section>
+
 
       <section className="skills-section">
         <h1 id="skills" className="main-title-bg">
           SKILLS
         </h1>
         <div className="skills-grid">
-          <HoverPopover src="/img/html-img.png" alt="HTML logo" label="HTML" />
-          <HoverPopover src="/img/css-img.png" alt="CSS logo" label="CSS" />
-          <HoverPopover src="/img/csharp-img.png" alt="C# logo" label="C#"/>
-          <HoverPopover src="/img/java-img.png" alt="Java logo" label="Java" />
-          <HoverPopover src="/img/js-img.png" alt="JavaScript logo" label="JavaScript" />
-          <HoverPopover src="/img/ts-img.png" alt="TypeScript logo" label="TypeScript" />
-          <HoverPopover src="/img/nodejs-img.png" alt="Node.js logo" label="Node.js" />
-          <HoverPopover src="/img/sqlserver-img.png" alt="SQL Server logo" label="SQL Server" />
-          <HoverPopover src="/img/postgresql.png" alt="PostgreSQL logo" label="PostgreSQL" />
-          <HoverPopover src="/img/git-img.png" alt="Git logo" label="Git" />
-          <HoverPopover src="/img/azure-img.png" alt="Azure DevOps logo" label="Azure DevOps" />
-          <HoverPopover src="/img/nextjs-original.png" alt="Next.js logo" label="Next.js" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML logo" label="HTML" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS logo" label="CSS" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C# logo" label="C#"/>
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java logo" label="Java" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript logo" label="JavaScript" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript logo" label="TypeScript" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js logo" label="Node.js" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server logo" label="SQL Server" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL logo" label="PostgreSQL" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git logo" label="Git" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg" alt="Azure DevOps logo" label="Azure DevOps" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure" label="Azure" />
+          <HoverPopover src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js logo" label="Next.js" />
           <HoverPopover src="/img/pwbi-img.png" alt="Power BI logo" label="Power BI" />
-  
         </div>
       </section>
 
